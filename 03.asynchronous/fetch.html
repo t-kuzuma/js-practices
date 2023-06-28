@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fetch HTML</title>
+    <title>Fetch HTML Example</title>
   </head>
   <body>
-    <p>test</p>
+    <script>
+      async function f() {
+        const response = await fetch('https://bootcamp.fjord.jp');
+        const data = await response.json();
+        console.log(data);
+      }
+
+      f();
+    </script>
   </body>
 </html>
