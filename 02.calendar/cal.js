@@ -16,21 +16,18 @@ const firstDay = new Date(year, month - 1, 1).getDay();
 const lastDate = new Date(year, month, 0).getDate();
 
 function printCalendarWithNewlineOnSaturdays(year, month, i) {
+  let eachDay = ` ${String(i).padStart(2, ' ')}`;
   if (new Date(year, month - 1, i).getDay() === 6) {
-    console.log(` ${String(i).padStart(2, ' ')}`);
+    console.log(eachDay);
   } else {
-    process.stdout.write(` ${String(i).padStart(2, ' ')}`);
+    process.stdout.write(eachDay);
   }
 }
 
 console.log(`      ${year}年 ${month}月`);
 console.log(' 日 月 火 水 木 金 土');
+process.stdout.write('   '.repeat(firstDay));
 for (let i = 1; i <= lastDate; i++) {
-  if (i === 1) {
-    process.stdout.write('   '.repeat(firstDay));
-    printCalendarWithNewlineOnSaturdays(year, month, i);
-  } else {
-    printCalendarWithNewlineOnSaturdays(year, month, i);
-  }
+  printCalendarWithNewlineOnSaturdays(year, month, i);
 }
 console.log();

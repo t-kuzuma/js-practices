@@ -9,7 +9,5 @@
     "prettier": "^2.7.1"
   },
   "type": "module",
-  "dependencies": {
-    "minimist": "^1.2.8"
-  }
+  "dependencies": {}
 }
