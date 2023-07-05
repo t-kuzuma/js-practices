@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fetch HTML Example</title>
+  </head>
+  <body>
+    <script>
+      async function fetchHTML() {
+        const response = await fetch('https://bootcamp.fjord.jp');
+        const data = await response.text();
+        console.log(data);
+      }
+
+      fetchHTML();
+    </script>
+  </body>
+</html>
